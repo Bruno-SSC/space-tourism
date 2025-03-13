@@ -1,0 +1,26 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@media screen and (min-width: $tablet_max) {
+  .home {
+    margin: auto;
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    font-size: 1rem;
+  }
+
+  .home_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .home_bg__img {
+    width: 100%;
+    object-fit: contain;
+  }
+}

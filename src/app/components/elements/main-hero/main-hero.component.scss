@@ -1,0 +1,54 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@media screen and (min-width: $tablet_max) {
+  .main_content {
+    display: flex;
+    align-items: flex-end;
+    height: 888px;
+    width: 100vw;
+    padding: 0 165px;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 300px;
+  }
+
+  .text {
+    height: 343px;
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text__paragraph,
+  .text__subtitle {
+    color: $blue_300;
+  }
+
+  .text__subtitle {
+    @include text_preset_5();
+  }
+
+  .text__paragraph {
+    @include text_preset_9();
+  }
+
+  .text__title {
+    color: $white;
+    @include text_preset_1();
+  }
+
+  .cta-btn {
+    width: 272px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: $white;
+    color: $blue_900;
+    @include text_preset_4();
+  }
+}

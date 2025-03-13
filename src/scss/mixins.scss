@@ -1,0 +1,71 @@
+@mixin text_preset_1 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 144px;
+}
+
+@mixin text_preset_2 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+}
+
+@mixin text_preset_3 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 56px;
+}
+
+@mixin text_preset_4 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+@mixin text_preset_5 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  letter-spacing: 4px;
+}
+
+@mixin text_preset_6 {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+}
+
+@mixin text_preset_7 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+@mixin text_preset_8 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: normal;
+  font-size: 16px;
+}
+
+@mixin text_preset_8_bold {
+  @include text_preset_8();
+  font-weight: 700;
+}
+
+@mixin text_preset_9 {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 180%;
+  font-size: 18px;
+}
