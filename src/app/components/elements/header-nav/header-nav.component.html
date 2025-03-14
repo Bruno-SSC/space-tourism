@@ -3,7 +3,7 @@
     <img class="logo_icon__img" src="assets/shared/logo.svg" alt="" />
   </div>
 
-  <div class="nav_menu">
+  <div class="nav_menu" *ngIf="!check_device('mobile')">
     <div class="line_icon">
       <img class="line_icon__img" src="assets/shared/line.png" alt="" />
     </div>
@@ -27,5 +27,13 @@
       <span class="nav_menu__number"> 03 </span>
       <span class="nav_menu__link">Technology</span>
     </div>
+  </div>
+
+  <div class="menu_icon" *ngIf="check_device('mobile')">
+    <img
+      class="menu_icon__img"
+      src="assets/shared/icon-hamburger.svg"
+      alt="hidden menu button"
+    />
   </div>
 </section>

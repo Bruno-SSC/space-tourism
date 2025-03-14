@@ -1,6 +1,61 @@
 @import "variables.scss";
 @import "mixins.scss";
 
+.main_content {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  font-size: 1rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  padding: 24px 24px 120px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.text__paragraph,
+.text__subtitle {
+  font-size: 1em;
+  color: $blue_300;
+}
+
+.text__subtitle {
+  @include text_preset_6();
+}
+
+.text__title {
+  color: $white;
+  @include text_preset_1();
+  font-size: 5em;
+}
+
+.text__paragraph {
+  text-align: center;
+  @include text_preset_9();
+}
+
+.cta-btn {
+  width: 144px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: $white;
+  color: $blue_900;
+  @include text_preset_4();
+  margin-bottom: 145px;
+  font-size: 1.2em;
+}
+
 @media screen and (min-width: $tablet_max) {
   .main_content {
     display: flex;
