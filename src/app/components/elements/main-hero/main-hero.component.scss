@@ -12,10 +12,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 100px;
 }
 
 .text {
-  padding: 24px 24px 120px 24px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,6 +57,26 @@
   font-size: 1.2em;
 }
 
+@media screen and (min-width: $mobile_max) {
+  .main_content {
+    display: flex;
+    align-items: flex-end;
+    width: 100vw;
+    padding: 128px 40px;
+  }
+
+  .cta-btn {
+    width: 272px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background-color: $white;
+    color: $blue_900;
+    @include text_preset_4();
+  }
+}
+
 @media screen and (min-width: $tablet_max) {
   .main_content {
     display: flex;
@@ -76,34 +97,5 @@
     width: 540px;
     display: flex;
     flex-direction: column;
-  }
-
-  .text__paragraph,
-  .text__subtitle {
-    color: $blue_300;
-  }
-
-  .text__subtitle {
-    @include text_preset_5();
-  }
-
-  .text__paragraph {
-    @include text_preset_9();
-  }
-
-  .text__title {
-    color: $white;
-    @include text_preset_1();
-  }
-
-  .cta-btn {
-    width: 272px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background-color: $white;
-    color: $blue_900;
-    @include text_preset_4();
   }
 }

@@ -18,81 +18,30 @@
   object-fit: cover;
 }
 
-.nav_menu {
-  position: relative;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  margin-left: auto;
-  color: $white;
-  display: flex;
-  align-items: center;
-  gap: 48px;
-  height: 96px;
-  padding-right: 64px;
-  padding-left: 159px;
-}
-
-.nav_menu__item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  height: 100%;
-}
-
-.nav_menu__number {
-  @include text_preset_8_bold;
-}
-
-.nav_menu__link {
-  text-transform: uppercase;
-  @include text_preset_8;
-}
-
-.line_icon {
-  position: absolute;
-  left: calc(-560px + 32px);
-  z-index: 1;
-  width: 560px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-}
-
-.line_icon__img {
-  width: 100%;
-  object-fit: cover;
-}
-
-@media screen and (min-width: $tablet_max) {
+@media screen and (min-width: $mobile_max) {
   .header_nav {
-    height: 136px;
     display: flex;
-    align-items: center;
-    padding-top: 40px;
-    padding-left: 64px;
+    padding: 0;
+    gap: 50px;
+    font-size: 1.2rem;
+    padding-left: 20px;
   }
 
   .logo_icon {
     width: 48px;
-  }
-
-  .logo_icon__img {
-    width: 100%;
-    object-fit: cover;
+    margin-left: auto;
   }
 
   .nav_menu {
     position: relative;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
-    margin-left: auto;
     color: $white;
     display: flex;
     align-items: center;
     gap: 48px;
-    height: 96px;
-    padding-right: 64px;
-    padding-left: 159px;
+    height: 100px;
+    padding: 0 40px;
   }
 
   .nav_menu__item {
@@ -109,6 +58,27 @@
   .nav_menu__link {
     text-transform: uppercase;
     @include text_preset_8;
+  }
+}
+
+@media screen and (min-width: $tablet_max) {
+  .header_nav {
+    height: 136px;
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 64px;
+  }
+
+  .logo_icon {
+    margin-left: initial;
+    width: 48px;
+  }
+
+  .nav_menu {
+    margin-left: auto;
+    padding-right: 64px;
+    padding-left: 159px;
   }
 
   .line_icon {
