@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { DeviceDetectService } from './services/device-detect.service';
+import { NavigationEnd, Router } from '@angular/router';
+import { SharedStatesService } from './services/shared-states.service';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +12,17 @@ export class AppComponent {
   title = 'space_tourism';
   inner_width: number = window.innerWidth;
 
-  constructor(private device_detect: DeviceDetectService) {
+  constructor(
+    private device_detect: DeviceDetectService,
+    private router: Router,
+    private shared_states: SharedStatesService
+  ) {
     this.device_detect.update_device(this.inner_width);
+    this.router.events.subscribe((e) => {
+      if (!(e instanceof NavigationEnd)) return;
+      const new_page = e.url.split('/')[1];
+      this.shared_states.update_page(new_page);
+    });
   }
 
   private debounce = (cb: Function) => {

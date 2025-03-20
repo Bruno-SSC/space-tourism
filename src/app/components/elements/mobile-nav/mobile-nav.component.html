@@ -1,0 +1,22 @@
+<section class="mobile_nav" *ngIf="show_sidemenu">
+  <div class="close_btn" (click)="close_sidemenu()">
+    <img
+      class="close_btn__img"
+      src="/assets/shared/icon-close.svg"
+      alt="button to close sidemenu navigation"
+    />
+  </div>
+
+  <div class="nav_menu">
+    <div
+      *ngFor="let link of pages; let i = index"
+      class="nav_menu__item"
+      [routerLink]="'/' + link"
+      (click)="update_page(link)"
+      routerLinkActive="nav_menu__item--active"
+    >
+      <span class="nav_menu__number"> 0{{ i }} </span>
+      <span class="nav_menu__link"> {{ link | titlecase }} </span>
+    </div>
+  </div>
+</section>

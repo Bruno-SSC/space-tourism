@@ -29,7 +29,11 @@
     </div>
   </div>
 
-  <div class="menu_icon" *ngIf="check_device('mobile')">
+  <div
+    class="menu_icon"
+    *ngIf="check_device('mobile')"
+    (click)="open_sidemenu()"
+  >
     <img
       class="menu_icon__img"
       src="assets/shared/icon-hamburger.svg"
