@@ -30,18 +30,19 @@
 }
 
 .text__subtitle {
-  @include text_preset_6();
+  @include bellefair_regular();
 }
 
 .text__title {
+  @include bellefair_regular();
   color: $white;
-  @include text_preset_1();
   font-size: 5em;
 }
 
 .text__paragraph {
+  font-family: $barlow;
   text-align: center;
-  @include text_preset_9();
+  line-height: 180%;
 }
 
 .cta-btn {
@@ -52,7 +53,7 @@
   place-items: center;
   background-color: $white;
   color: $blue_900;
-  @include text_preset_4();
+  font-family: $bellefair;
   margin-bottom: 145px;
   font-size: 1.2em;
 }
@@ -73,7 +74,7 @@
     place-items: center;
     background-color: $white;
     color: $blue_900;
-    @include text_preset_4();
+    font-family: $bellefair;
   }
 }
 

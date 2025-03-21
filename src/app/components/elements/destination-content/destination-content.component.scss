@@ -1,0 +1,109 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+@mixin flex_col_center() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.destination_content {
+  width: 100vw;
+  height: fit-content;
+  @include flex_col_center();
+  gap: 25px;
+  padding: 20px 0;
+  color: $white;
+  font-size: 1rem;
+}
+
+.page_title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  letter-spacing: 2px;
+  font-size: 1.6em;
+}
+
+.page_title__action {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+}
+
+.page_title__number {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  opacity: 25%;
+}
+
+.star_picture {
+  width: 200px;
+}
+
+.star_picture__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.star_names {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  letter-spacing: 2px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.star_names__item {
+  font-size: 1.3em;
+  padding-bottom: 10px;
+  color: $blue_300;
+}
+
+.star_names__item--active {
+  border-bottom: 2px solid $white;
+  color: $white;
+}
+
+.star_brief {
+  @include flex_col_center();
+  gap: 16px;
+  padding: 0 24px;
+}
+
+.star_brief__title {
+  @include bellefair_regular();
+  font-size: 5em;
+  text-transform: uppercase;
+}
+
+.star_brief__description {
+  font-family: $barlow;
+  color: $blue_300;
+  font-size: 1.3em;
+  line-height: 180%;
+  font-weight: 200;
+  text-align: center;
+  border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
+  padding-bottom: 24px;
+}
+
+.avg_distance,
+.travel_time {
+  @include flex_col_center();
+  gap: 12px;
+}
+
+.avg_distance__title,
+.travel_time__title {
+  @include bellefair_regular();
+  font-size: 2.3em;
+  text-transform: uppercase;
+}
+
+.avg_distance__label,
+.travel_time__label {
+  @include barlow_2px_space();
+  font-size: 1.1em;
+  color: $blue_300;
+  font-weight: 200;
+}

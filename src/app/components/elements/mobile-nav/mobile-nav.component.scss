@@ -47,10 +47,13 @@
 }
 
 .nav_menu__number {
-  @include text_preset_8_bold;
+  font-family: $barlow;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
 .nav_menu__link {
+  font-family: $barlow;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  @include text_preset_8;
 }

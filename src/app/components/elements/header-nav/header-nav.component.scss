@@ -52,12 +52,13 @@
   }
 
   .nav_menu__number {
-    @include text_preset_8_bold;
+    @include barlow_2px_space();
+    font-weight: 700;
   }
 
   .nav_menu__link {
+    @include barlow_2px_space();
     text-transform: uppercase;
-    @include text_preset_8;
   }
 }
 

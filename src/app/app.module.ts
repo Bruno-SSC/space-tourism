@@ -9,6 +9,7 @@ import { MainHeroComponent } from './components/elements/main-hero/main-hero.com
 import { MobileNavComponent } from './components/elements/mobile-nav/mobile-nav.component';
 import { DestinationComponent } from './components/pages/destination/destination.component';
 import { PageBgComponent } from './components/elements/page-bg/page-bg.component';
+import { DestinationContentComponent } from './components/elements/destination-content/destination-content.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PageBgComponent } from './components/elements/page-bg/page-bg.component
     MainHeroComponent,
     MobileNavComponent,
     DestinationComponent,
-    PageBgComponent
+    PageBgComponent,
+    DestinationContentComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,13 @@
 }
 
 .home_bg__img {
-  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+
+@media screen and (min-width: $mobile_max) {
+  .home_bg__img {
+    height: initial;
+    width: 100%;
+  }
 }

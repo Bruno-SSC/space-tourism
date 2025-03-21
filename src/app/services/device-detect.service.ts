@@ -16,7 +16,6 @@ export class DeviceDetectService {
     }
 
     if (new_width <= 1050) {
-      console.log('tablet');
       this.$current_device_subject.next('tablet');
       return;
     }

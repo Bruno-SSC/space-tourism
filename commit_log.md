@@ -17,3 +17,6 @@ com3
     - I mistakenly bounded a function in the page_bg template. Fixed the problem.
     - fixed the bg not being updated when the app page loads anywhere besides home.
     - fixed the styling bug of the image width not stretching when switching to destination page.
+com4 
+    - implemented the destination page component for mobile.
+    

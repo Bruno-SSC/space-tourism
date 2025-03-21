@@ -1,0 +1,45 @@
+<section class="destination_content">
+  <div class="page_title">
+    <span class="page_title__number"> 01 </span>
+    <span class="page_title__action"> PICK YOUR DESTINATION </span>
+  </div>
+
+  <div class="star_picture">
+    <img
+      class="star_picture__img"
+      [src]="active_star.picture"
+      alt="picture of the choosen star"
+    />
+  </div>
+
+  <ul class="star_names">
+    <li
+      (click)="change_star(star['name'])"
+      [ngClass]="{
+        star_names__item: true,
+        'star_names__item--active': active_star.name == star['name']
+      }"
+      *ngFor="let star of stars"
+      [routerLink]="star['name']"
+    >
+      {{ star["name"] | uppercase }}
+    </li>
+  </ul>
+
+  <div class="star_brief">
+    <h1 class="star_brief__title">{{ active_star.name }}</h1>
+    <p class="star_brief__description">
+      {{ active_star.description }}
+    </p>
+  </div>
+
+  <div class="avg_distance">
+    <span class="avg_distance__label">AVG. DISTANCE</span>
+    <h2 class="avg_distance__title">{{ active_star.avg_distance }}</h2>
+  </div>
+
+  <div class="travel_time">
+    <span class="travel_time__label">EST. TRAVEL TIME</span>
+    <h2 class="travel_time__title">{{ active_star.travel_time }}</h2>
+  </div>
+</section>

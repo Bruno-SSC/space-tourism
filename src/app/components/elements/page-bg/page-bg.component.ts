@@ -29,6 +29,11 @@ export class PageBgComponent {
   }
 
   update_bg_src() {
+    if (this.device == 'desktop') {
+      this.bg_img_src = `assets/${this.active_page}/background-${this.active_page}-${this.device}.png`;
+      return;
+    }
+    
     this.bg_img_src = `assets/${this.active_page}/background-${this.active_page}-${this.device}.jpg`;
   }
 }
