@@ -19,4 +19,6 @@ com3
     - fixed the styling bug of the image width not stretching when switching to destination page.
 com4 
     - implemented the destination page component for mobile.
+com5 
+    - implemented the crew page component for mobile.
     

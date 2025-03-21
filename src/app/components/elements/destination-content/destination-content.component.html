@@ -1,13 +1,10 @@
 <section class="destination_content">
-  <div class="page_title">
-    <span class="page_title__number"> 01 </span>
-    <span class="page_title__action"> PICK YOUR DESTINATION </span>
-  </div>
+  <app-page-title></app-page-title>
 
   <div class="star_picture">
     <img
       class="star_picture__img"
-      [src]="active_star.picture"
+      [src]="picture_path"
       alt="picture of the choosen star"
     />
   </div>
@@ -20,7 +17,6 @@
         'star_names__item--active': active_star.name == star['name']
       }"
       *ngFor="let star of stars"
-      [routerLink]="star['name']"
     >
       {{ star["name"] | uppercase }}
     </li>

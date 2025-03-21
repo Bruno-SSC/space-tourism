@@ -1,11 +1,29 @@
 @import "variables.scss";
 
+@mixin col_center() {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @mixin bellefair_regular() {
   font-family: $bellefair;
   font-weight: 400;
 }
 
-@mixin barlow_2px_space(){
+@mixin barlow_regular() {
+  font-family: $barlow;
+  font-weight: 400;
+}
+
+@mixin barlow_2px() {
   font-family: $barlow;
   letter-spacing: 2px;
+}
+
+@mixin barlow_paragraph() {
+  font-family: $barlow;
+  text-align: center;
+  line-height: 180%;
+  color: $blue_300;
 }

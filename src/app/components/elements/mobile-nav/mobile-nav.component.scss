@@ -47,13 +47,11 @@
 }
 
 .nav_menu__number {
-  font-family: $barlow;
-  letter-spacing: 2px;
+  @include barlow_2px();
   font-weight: 700;
 }
 
 .nav_menu__link {
-  font-family: $barlow;
-  letter-spacing: 2px;
+  @include barlow_2px();
   text-transform: uppercase;
 }

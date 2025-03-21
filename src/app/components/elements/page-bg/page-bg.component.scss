@@ -11,12 +11,6 @@
 
 .home_bg__img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
-}
-
-@media screen and (min-width: $mobile_max) {
-  .home_bg__img {
-    height: initial;
-    width: 100%;
-  }
 }

@@ -10,6 +10,9 @@ import { MobileNavComponent } from './components/elements/mobile-nav/mobile-nav.
 import { DestinationComponent } from './components/pages/destination/destination.component';
 import { PageBgComponent } from './components/elements/page-bg/page-bg.component';
 import { DestinationContentComponent } from './components/elements/destination-content/destination-content.component';
+import { CrewComponent } from './components/pages/crew/crew.component';
+import { CrewContentComponent } from './components/elements/crew-content/crew-content.component';
+import { PageTitleComponent } from './components/elements/page-title/page-title.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { DestinationContentComponent } from './components/elements/destination-c
     MobileNavComponent,
     DestinationComponent,
     PageBgComponent,
-    DestinationContentComponent
+    DestinationContentComponent,
+    CrewComponent,
+    CrewContentComponent,
+    PageTitleComponent
   ],
   imports: [
     BrowserModule,

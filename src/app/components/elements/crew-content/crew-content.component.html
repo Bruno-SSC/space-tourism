@@ -1,0 +1,28 @@
+<section class="crew_content">
+  <app-page-title></app-page-title>
+
+  <div class="member_info">
+    <h2 class="member_info__role">{{ active_member.role | uppercase }}</h2>
+    <h1 class="member_info__name">{{ active_member.name | uppercase }}</h1>
+    <p class="member_info__bio">{{ active_member.bio }}</p>
+  </div>
+
+  <ul class="crew_members">
+    <li
+      *ngFor="let member of crew"
+      (click)="change_member(member.name)"
+      [ngClass]="{
+        crew_members__item: true,
+        'crew_members__item--active': active_member.name == member.name
+      }"
+    ></li>
+  </ul>
+
+  <div class="member_picture">
+    <img
+      class="member_picture__img"
+      [src]="member_pic"
+      alt="picture of the crew member"
+    />
+  </div>
+</section>

@@ -40,9 +40,8 @@
 }
 
 .text__paragraph {
-  font-family: $barlow;
-  text-align: center;
-  line-height: 180%;
+  @include barlow_paragraph();
+  font-size: 1.3em;
 }
 
 .cta-btn {

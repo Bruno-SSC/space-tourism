@@ -1,0 +1,18 @@
+.page_label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  letter-spacing: 2px;
+  font-size: 1.4em;
+}
+
+.page_label__title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+}
+
+.page_label__number {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: bold;
+  opacity: 25%;
+}
