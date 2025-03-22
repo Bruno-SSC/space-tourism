@@ -16,8 +16,8 @@
   font-weight: 400;
 }
 
-@mixin barlow_2px() {
-  font-family: $barlow;
+@mixin barlowc_2px() {
+  font-family: $barlow_condensed;
   letter-spacing: 2px;
 }
 

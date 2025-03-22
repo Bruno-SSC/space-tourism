@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DeviceDetectService } from 'src/app/services/device-detect.service';
 import { SharedStatesService } from 'src/app/services/shared-states.service';
+import { website_pages } from 'src/app/utils/interfaces';
 
 @Component({
   selector: 'app-mobile-nav',
@@ -10,7 +11,7 @@ import { SharedStatesService } from 'src/app/services/shared-states.service';
 export class MobileNavComponent {
   device: string = 'mobile';
   visible_sidemenu: boolean = false;
-  pages: string[] = ['home', 'destination', 'crew', 'technology'];
+  pages: website_pages[] = ['home', 'destination', 'crew', 'technology'];
 
   constructor(
     private device_detect: DeviceDetectService,
@@ -37,7 +38,7 @@ export class MobileNavComponent {
     return this.device == dev_type;
   }
 
-  update_page(new_page: string) {
+  update_page(new_page: website_pages) {
     this.close_sidemenu();
     this.shared_states.update_page(new_page);
   }

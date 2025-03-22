@@ -5,7 +5,7 @@
   width: 100vw;
   height: fit-content;
   @include col_center();
-  gap: 25px;
+  gap: 30px;
   padding: 20px 0;
   color: $white;
   font-size: 1rem;
@@ -24,10 +24,10 @@
   display: flex;
   gap: 32px;
   list-style: none;
-  @include barlow_2px();
 }
 
 .star_names__item {
+  @include barlowc_2px();
   font-size: 1.3em;
   padding-bottom: 10px;
   color: $blue_300;
@@ -46,13 +46,13 @@
 
 .star_brief__title {
   @include bellefair_regular();
-  font-size: 5em;
+  font-size: 3.2em;
   text-transform: uppercase;
 }
 
 .star_brief__description {
   @include barlow_paragraph();
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: 200;
   text-align: center;
   border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
@@ -74,8 +74,136 @@
 
 .avg_distance__label,
 .travel_time__label {
-  @include barlow_2px();
+  @include barlowc_2px();
   font-size: 1.1em;
   color: $blue_300;
   font-weight: 200;
+}
+
+@media screen and (min-width: $mobile_max) {
+  .destination_content {
+    gap: 50px;
+    padding: 50px 0;
+  }
+
+  .star_picture {
+    width: 350px;
+  }
+
+  .star_names {
+    gap: 60px;
+  }
+
+  .star_names__item {
+    font-size: 1.6em;
+  }
+
+  .star_brief {
+    padding: 0 100px;
+  }
+
+  .star_brief__title {
+    font-size: 6em;
+  }
+
+  .star_brief__description {
+    font-size: 1.6em;
+  }
+
+  .avg_distance,
+  .travel_time {
+    gap: 20px;
+  }
+
+  .avg_distance__title,
+  .travel_time__title {
+    font-size: 3em;
+  }
+
+  .avg_distance__label,
+  .travel_time__label {
+    font-size: 1.7em;
+  }
+}
+
+@media screen and (min-width: $tablet_max) {
+  .destination_content {
+    width: fit-content;
+    margin: auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 0.2fr 0.4fr 0.2fr 1fr 0.5fr;
+    grid-template-columns: 40vw 20vw 20vw;
+    gap: 0;
+  }
+
+  app-page-title {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  .star_picture {
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 3 / 6;
+    width: 60%;
+    height: 100%;
+  }
+
+  .star_names {
+    grid-column: 2;
+    grid-row: 3;
+    width: fit-content;
+  }
+
+  .star_names__item {
+    font-size: 1em;
+  }
+
+  .star_brief {
+    grid-row: 4;
+    grid-column: 2 / 4;
+    // it's for because it ends once it REACHES the desired grid line.
+    // It goes through the 3 column and stops once the 4th starts.
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .star_brief__title {
+    font-size: 3em;
+  }
+
+  .star_brief__description {
+    text-align: start;
+    font-size: 1em;
+    width: 600px;
+  }
+
+  .avg_distance,
+  .travel_time {
+    align-self: start;
+    justify-self: start;
+    gap: 12px;
+  }
+
+
+  .avg_distance {
+    grid-row: 5;
+    grid-column: 2;
+  }
+
+  .travel_time {
+    grid-row: 5;
+    grid-column: 3;
+  }
+
+  .avg_distance__title,
+  .travel_time__title {
+    font-size: 1.5em;
+  }
+
+  .avg_distance__label,
+  .travel_time__label {
+    font-size: 1em;
+  }
 }

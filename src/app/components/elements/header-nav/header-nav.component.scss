@@ -23,7 +23,7 @@
     display: flex;
     padding: 0;
     gap: 50px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-left: 20px;
   }
 
@@ -49,15 +49,20 @@
     align-items: center;
     gap: 12px;
     height: 100%;
+    font-size: 1.3em;
+  }
+
+  .nav_menu__item--active {
+    border-bottom: 3px solid $white;
   }
 
   .nav_menu__number {
-    @include barlow_2px();
+    @include barlowc_2px();
     font-weight: 700;
   }
 
   .nav_menu__link {
-    @include barlow_2px();
+    @include barlowc_2px();
     text-transform: uppercase;
   }
 }
@@ -69,7 +74,7 @@
     align-items: center;
     padding-top: 40px;
     padding-left: 64px;
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .logo_icon {
@@ -96,5 +101,9 @@
   .line_icon__img {
     width: 100%;
     object-fit: cover;
+  }
+
+  .nav_menu__item {
+    font-size: 1em;
   }
 }

@@ -1,4 +1,5 @@
 export type device_types = 'mobile' | 'tablet' | 'desktop';
+export type website_pages = 'home' | 'destination' | 'crew' | 'technology';
 
 export interface star_data {
   name: string;
@@ -29,3 +30,9 @@ export interface tech_devices {
   };
   description: string;
 }
+
+export type bg_imgs_type = {
+  [key in website_pages]: {
+    [key in device_types]: string;
+  };
+};

@@ -23,4 +23,6 @@ com5
     - implemented the crew page component for mobile.
 com6
     - implemented the tech page component for mobile.
-    
+com7
+    - style destinantion page for tablet/desktop
+    - a bunch of "minor" adjusts of logic/types in several places. 

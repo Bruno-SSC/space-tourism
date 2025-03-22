@@ -1,4 +1,32 @@
-import { crew_member, star_data, tech_devices } from './interfaces';
+import {
+  bg_imgs_type,
+  crew_member,
+  star_data,
+  tech_devices,
+} from './interfaces';
+
+export const bg_imgs: bg_imgs_type = {
+  home: {
+    mobile: '/assets/home/background-home-mobile.jpg',
+    tablet: '/assets/home/background-home-tablet.jpg',
+    desktop: '/assets/home/background-home-desktop.png',
+  },
+  destination: {
+    mobile: '/assets/destination/background-destination-mobile.jpg',
+    tablet: '/assets/destination/background-destination-tablet.jpg',
+    desktop: '/assets/destination/background-destination-desktop.jpg',
+  },
+  crew: {
+    mobile: '/assets/crew/background-crew-mobile.jpg',
+    tablet: '/assets/crew/background-crew-tablet.jpg',
+    desktop: '/assets/crew/background-crew-desktop.jpg',
+  },
+  technology: {
+    mobile: '/assets/technology/background-technology-mobile.jpg',
+    tablet: '/assets/technology/background-technology-tablet.jpg',
+    desktop: '/assets/technology/background-technology-desktop.jpg',
+  },
+};
 
 export const stars_data: star_data[] = [
   {

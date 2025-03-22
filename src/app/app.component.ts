@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { DeviceDetectService } from './services/device-detect.service';
 import { NavigationEnd, Router } from '@angular/router';
 import { SharedStatesService } from './services/shared-states.service';
+import { website_pages } from './utils/interfaces';
 
 @Component({
   selector: 'app-root',
@@ -20,7 +21,7 @@ export class AppComponent {
     this.device_detect.update_device(this.inner_width);
     this.router.events.subscribe((e) => {
       if (!(e instanceof NavigationEnd)) return;
-      const new_page = e.url.split('/')[1];
+      const new_page: website_pages = e.url.split('/')[1] as website_pages;
       this.shared_states.update_page(new_page);
     });
   }
