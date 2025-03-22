@@ -20,3 +20,12 @@ export interface crew_member {
   };
   role: string;
 }
+
+export interface tech_devices {
+  name: string;
+  images: {
+    png: string;
+    webp: string;
+  };
+  description: string;
+}

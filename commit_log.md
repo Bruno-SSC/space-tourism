@@ -21,4 +21,6 @@ com4
     - implemented the destination page component for mobile.
 com5 
     - implemented the crew page component for mobile.
+com6
+    - implemented the tech page component for mobile.
     

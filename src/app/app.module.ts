@@ -13,6 +13,8 @@ import { DestinationContentComponent } from './components/elements/destination-c
 import { CrewComponent } from './components/pages/crew/crew.component';
 import { CrewContentComponent } from './components/elements/crew-content/crew-content.component';
 import { PageTitleComponent } from './components/elements/page-title/page-title.component';
+import { TechnologyComponent } from './components/pages/technology/technology.component';
+import { TechContentComponent } from './components/elements/tech-content/tech-content.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { PageTitleComponent } from './components/elements/page-title/page-title.
     DestinationContentComponent,
     CrewComponent,
     CrewContentComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    TechnologyComponent,
+    TechContentComponent
   ],
   imports: [
     BrowserModule,

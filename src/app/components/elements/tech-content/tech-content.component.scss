@@ -1,0 +1,68 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.tech_content {
+  @include col_center();
+  width: 100vw;
+  height: fit-content;
+  gap: 40px;
+  padding: 20px 0;
+  color: $white;
+  font-size: 1rem;
+}
+
+.tech_picture {
+  width: 100vw;
+  height: 300px;
+  overflow: hidden;
+}
+
+.tech_picture__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.tech_devices {
+  display: flex;
+  gap: 20px;
+}
+
+.tech_devices__item {
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba($color: $white, $alpha: 0.2);
+  @include bellefair_regular();
+}
+
+.tech_devices__item--active {
+  background-color: $white;
+  color: #000;
+}
+
+.tech_info {
+  @include col_center();
+  padding: 0 24px;
+  gap: 15px;
+}
+
+.tech_info__subtitle {
+  opacity: 50%;
+  @include bellefair_regular();
+  font-size: 1.2em;
+}
+
+.tech_info__title {
+  @include bellefair_regular();
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.tech_info__description {
+  @include barlow_paragraph();
+  font-size: 1.2em;
+}

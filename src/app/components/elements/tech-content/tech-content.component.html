@@ -1,0 +1,34 @@
+<section class="tech_content">
+  <app-page-title></app-page-title>
+
+  <div class="tech_picture">
+    <img
+      class="tech_picture__img"
+      [src]="tech_picture"
+      alt="picture of launching rocket"
+    />
+  </div>
+
+  <ul class="tech_devices">
+    <li
+      *ngFor="let tech of tech_set; let i = index"
+      [ngClass]="{
+        tech_devices__item: true,
+        'tech_devices__item--active': active_tech.name == tech.name
+      }"
+      (click)="change_tech(tech.name)"
+    >
+      {{ i + 1 }}
+    </li>
+  </ul>
+
+  <div class="tech_info">
+    <h2 class="tech_info__subtitle">THE TERMINOLOGY…</h2>
+    <h1 class="tech_info__title">
+      {{ active_tech.name }}
+    </h1>
+    <p class="tech_info__description">
+      {{ active_tech.description }}
+    </p>
+  </div>
+</section>
