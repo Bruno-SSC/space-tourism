@@ -25,4 +25,6 @@ com6
     - implemented the tech page component for mobile.
 com7
     - style destinantion page for tablet/desktop
-    - a bunch of "minor" adjusts of logic/types in several places. 
+    - a bunch of "minor" adjusts in several places. 
+com8 
+    - droped the mobile-first approach. Style crew page for desktop and some more minor adjusts in the header and page-title component styles.

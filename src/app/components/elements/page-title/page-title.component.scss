@@ -1,42 +1,57 @@
 @import "variables.scss";
 
+@media screen and (max-width: $tablet_max) {
+  .page_label {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    letter-spacing: 2px;
+    font-size: 1rem;
+  }
+
+  .page_label__title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+  }
+
+  .page_label__number {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: bold;
+    opacity: 25%;
+    font-size: 1.3em;
+  }
+
+  @media screen and (min-width: $mobile_max) {
+    .page_label {
+      justify-content: flex-start;
+      padding-left: 40px;
+    }
+
+    .page_label__title,
+    .page_label__number {
+      font-size: 1.8em;
+    }
+  }
+}
+
 .page_label {
-  width: 100vw;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  letter-spacing: 2px;
+  align-items: center;
+  gap: 10px;
   font-size: 1rem;
+  letter-spacing: 4px;
+  font-family: $barlow_condensed;
 }
 
 .page_label__title {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 400;
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 
 .page_label__number {
-  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.2em;
   font-weight: bold;
   opacity: 25%;
-  font-size: 1.3em;
-}
-
-@media screen and (min-width: $mobile_max) {
-  .page_label {
-    justify-content: flex-start;
-    padding-left: 40px;
-  }
-
-  .page_label__title,
-  .page_label__number {
-    font-size: 1.8em;
-  }
-}
-
-@media screen and (min-width: $tablet_max) {
-  .page_label__title,
-  .page_label__number {
-    font-size: 1.4em;
-  }
 }

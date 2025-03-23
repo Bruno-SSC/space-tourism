@@ -1,83 +1,155 @@
 @import "variables.scss";
 @import "mixins.scss";
 
+@media screen and (max-width: $tablet_max) {
+  .crew_content {
+    @include col_center();
+    width: 100vw;
+    height: fit-content;
+    min-height: 100vh;
+    gap: 40px;
+    padding: 20px 0;
+    color: $white;
+    font-size: 1rem;
+  }
+
+  .page_title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    letter-spacing: 2px;
+    font-size: 1.6em;
+  }
+
+  .page_title__action {
+    @include barlow_regular();
+  }
+
+  .page_title__number {
+    font-family: $barlow;
+    font-weight: bold;
+    opacity: 25%;
+  }
+
+  .member_info {
+    @include col_center();
+    padding: 0 24px;
+  }
+
+  .member_info__name,
+  .member_info__role {
+    @include bellefair_regular();
+  }
+
+  .member_info__role {
+    padding-bottom: 8px;
+    opacity: 50%;
+    font-size: 1.2em;
+  }
+
+  .member_info__name {
+    padding-bottom: 24px;
+    font-size: 1.5em;
+  }
+
+  .member_info__bio {
+    @include barlow_paragraph();
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.2em;
+  }
+
+  .crew_members {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+
+  .crew_members__item {
+    border-radius: 50%;
+    padding: 4px;
+    background-color: $white;
+    opacity: 25%;
+  }
+
+  .crew_members__item--active {
+    opacity: 100%;
+  }
+
+  .member_picture {
+    width: 100vw;
+    text-align: center;
+    position: relative;
+  }
+
+  .member_picture::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
+  }
+
+  .member_picture__img {
+    width: 50%;
+    object-fit: cover;
+  }
+
+  @media screen and (min-width: $mobile_max) {
+    .crew_content {
+      padding: 60px 40px 0 40px;
+      justify-content: space-between;
+    }
+
+    .member_info {
+      gap: 12px;
+      padding: 0 80px;
+      padding-top: 40px;
+    }
+
+    .member_info__role {
+      font-size: 2em;
+    }
+
+    .member_info__name {
+      font-size: 3em;
+    }
+
+    .member_info__bio {
+      font-size: 1.6em;
+    }
+
+    .crew_members__item {
+      padding: 8px;
+    }
+  }
+}
+
 .crew_content {
-  @include col_center();
+  margin: auto;
+  display: grid;
   width: 100vw;
-  height: fit-content;
-  gap: 40px;
-  padding: 20px 0;
-  color: $white;
+  padding: 60px 120px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 50px 600px 50px;
+  place-items: center;
   font-size: 1rem;
 }
 
-.page_title {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  letter-spacing: 2px;
-  font-size: 1.6em;
-}
-
-.page_title__action {
-  @include barlow_regular();
-}
-
-.page_title__number {
-  font-family: $barlow;
-  font-weight: bold;
-  opacity: 25%;
-}
-
-.member_info {
-  @include col_center();
-  padding: 0 24px;
-}
-
-.member_info__name,
-.member_info__role {
-  @include bellefair_regular();
-}
-
-.member_info__role {
-  padding-bottom: 8px;
-  font-size: 1.2em;
-  opacity: 50%;
-}
-
-.member_info__name {
-  padding-bottom: 24px;
-  font-size: 1.5em;
-}
-
-.member_info__bio {
-  @include barlow_paragraph();
-  text-align: center;
-  font-weight: 200;
-  font-size: 1.2em;
-}
-
-.crew_members {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
-.crew_members__item {
-  border-radius: 50%;
-  padding: 4px;
-  background-color: $white;
-  opacity: 25%;
-}
-
-.crew_members__item--active {
-  opacity: 100%;
+app-page-title {
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: start;
 }
 
 .member_picture {
-  width: 100vw;
-  text-align: center;
   position: relative;
+  grid-row: 2 / 4;
+  grid-column: 2;
+  height: 100%;
+  text-align: center;
 }
 
 .member_picture::before {
@@ -87,13 +159,65 @@
   left: 0;
   width: 100%;
   height: 20%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, black 100%);
-  // #000 0% = fully visible/opaque black. It's a css thing of how it blends colors.
-  // also, I might just not know how to read this "color percentage" format of gradient. 
-  // percentage is really opacity/transparency?
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #0b0e17 100%);
 }
 
 .member_picture__img {
-  width: 50%;
+  height: 100%;
   object-fit: cover;
+}
+
+.crew_members {
+  grid-row: 3;
+  grid-column: 1;
+  place-self: start;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  height: fit-content;
+}
+
+.crew_members__item {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background-color: $white;
+  opacity: 25%;
+  cursor: pointer;
+}
+
+.crew_members__item--active {
+  opacity: 100%;
+}
+
+.member_info {
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.member_info__name,
+.member_info__role {
+  @include bellefair_regular();
+}
+
+.member_info__role {
+  padding-bottom: 8px;
+  font-size: 1.4em;
+  opacity: 50%;
+}
+
+.member_info__name {
+  padding-bottom: 24px;
+  font-size: 2.5em;
+}
+
+.member_info__bio {
+  @include barlow_paragraph();
+  font-weight: 200;
+  text-align: start;
+  font-size: 1.2em;
 }
