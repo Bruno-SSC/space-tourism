@@ -10,16 +10,9 @@ export class DeviceDetectService {
   $current_device_observable = this.$current_device_subject.asObservable();
 
   update_device(new_width: number): void {
-    if (new_width <= 480) {
-      this.$current_device_subject.next('mobile');
-      return;
-    }
-
-    if (new_width <= 1050) {
-      this.$current_device_subject.next('tablet');
-      return;
-    }
-
-    this.$current_device_subject.next('desktop');
+    let updated_device: device_types = 'mobile';
+    if (new_width >= 480) updated_device = 'tablet';
+    if (new_width >= 1050) updated_device = 'desktop';
+    this.$current_device_subject.next(updated_device);
   }
 }

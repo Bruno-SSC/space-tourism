@@ -27,4 +27,8 @@ com7
     - style destinantion page for tablet/desktop
     - a bunch of "minor" adjusts in several places. 
 com8 
-    - droped the mobile-first approach. Style crew page for desktop and some more minor adjusts in the header and page-title component styles.
+    - droped the mobile-first approach. Styled crew page for desktop and some more minor adjusts in the header and page-title component styles.
+com9
+    - fixed desktop overriding mobile styles in crew_content comp.
+    - fixed the device change not triggering page_br_src updates.
+    - added conditional to avoid unecessary initial updates in page_bg subscriber.

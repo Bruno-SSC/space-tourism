@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DeviceDetectService } from 'src/app/services/device-detect.service';
 import { SharedStatesService } from 'src/app/services/shared-states.service';
 import { bg_imgs } from 'src/app/utils/data';
+
 import {
   bg_imgs_type,
   device_types,
@@ -25,14 +26,14 @@ export class PageBgComponent {
   ) {
     this.device_detect.$current_device_observable.subscribe((value) => {
       this.curr_device = value;
-    });
-
-    this.shared_states.page_observable.subscribe((value) => {
-      this.active_page = value;
       this.update_bg_src();
     });
 
-    this.update_bg_src();
+    this.shared_states.page_observable.subscribe((value) => {
+      if (this.active_page == value) return;
+      this.active_page = value;
+      this.update_bg_src();
+    });
   }
 
   update_bg_src() {

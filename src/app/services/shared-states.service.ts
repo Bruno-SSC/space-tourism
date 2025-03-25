@@ -12,13 +12,10 @@ export class SharedStatesService {
   private page_subject = new BehaviorSubject<website_pages>('home');
   page_observable = this.page_subject.asObservable();
 
-  constructor() {}
-
   toggle_sidemenu(new_state: boolean) {
     this.visible_menu_subject.next(new_state);
   }
 
-  //? if I stick to this method, best to use a union of pages
   update_page(new_page: website_pages) {
     this.page_subject.next(new_page);
   }
