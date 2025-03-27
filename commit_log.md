@@ -32,3 +32,7 @@ com9
     - fixed desktop overriding mobile styles in crew_content comp.
     - fixed the device change not triggering page_br_src updates.
     - added conditional to avoid unecessary initial updates in page_bg subscriber.
+com10 
+    - added tablet and desktop styling for tech-content
+    - some minor adjusts and set up to deploy.
+    

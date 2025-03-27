@@ -17,12 +17,14 @@ export class TechContentComponent {
   constructor(private device_detect: DeviceDetectService) {
     this.device_detect.$current_device_observable.subscribe((value) => {
       this.curr_device = value;
+      this.update_tech_img();
     });
   }
 
   update_tech_img() {
     this.tech_picture = this.active_tech.images.webp;
-    if (this.curr_device !== 'mobile') return;
+    console.log(this.tech_picture);
+    if (this.curr_device !== 'desktop') return;
     this.tech_picture = this.active_tech.images.png;
   }
 

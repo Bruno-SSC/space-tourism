@@ -1,27 +1,36 @@
-# SpaceTourism
+<h1 align="center"> Space Tour 💻 </h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+## Status 🔧
 
-## Development server
+Almost done. Lacks a few tweaks and animations.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requirements 📄
 
-## Code scaffolding
+- View each page and be able to toggle between the tabs to see new information
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Alerts ⚡
 
-## Build
+- > [FrontendMentor Challenge Page](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3?tab=downloads)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- > [Live Project Link](https://spac3tour.netlify.app)
 
-## Running unit tests
+## Goal 📌
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Serve as proof of skill in my portfolio.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<h3 align="center"> Home 📷 </h3>
 
-## Further help
+<div align="center">
+    <img height="300em" src="./src/assets/showcase.png">
+</div>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h3 align="center"> Tecnologias utilizadas 🤖 </h3>
+
+> <div align="center">
+>   <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white">
+>   <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" >
+> </div>
