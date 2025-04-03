@@ -11,7 +11,7 @@
 
   <ul class="star_names">
     <li
-      (click)="change_star(star['name'])"
+      [routerLink]="['/destination', star.name]"
       [ngClass]="{
         star_names__item: true,
         'star_names__item--active': active_star.name == star['name']

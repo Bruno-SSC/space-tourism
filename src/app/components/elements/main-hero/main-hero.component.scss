@@ -54,7 +54,7 @@
   color: $blue_900;
   font-family: $bellefair;
   margin-bottom: 145px;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 @media screen and (min-width: $mobile_max) {
@@ -84,7 +84,7 @@
     align-items: flex-end;
     width: 100vw;
     padding: 128px;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .hero {
@@ -108,7 +108,7 @@
   }
 
   .text__title {
-    font-size: 6em;
+    font-size: 5em;
   }
 
   .text__paragraph {

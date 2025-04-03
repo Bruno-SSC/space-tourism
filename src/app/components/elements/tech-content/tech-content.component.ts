@@ -23,7 +23,6 @@ export class TechContentComponent {
 
   update_tech_img() {
     this.tech_picture = this.active_tech.images.webp;
-    console.log(this.tech_picture);
     if (this.curr_device !== 'desktop') return;
     this.tech_picture = this.active_tech.images.png;
   }

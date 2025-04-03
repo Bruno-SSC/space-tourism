@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DeviceDetectService } from 'src/app/services/device-detect.service';
 import { SharedStatesService } from 'src/app/services/shared-states.service';
+import { website_pages } from 'src/app/utils/interfaces';
 
 @Component({
   selector: 'app-header-nav',
@@ -9,6 +10,7 @@ import { SharedStatesService } from 'src/app/services/shared-states.service';
 })
 export class HeaderNavComponent {
   device: string = 'mobile';
+  pages: website_pages[] = ['home', 'destination', 'crew', 'technology'];
 
   constructor(
     private device_detect: DeviceDetectService,

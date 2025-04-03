@@ -11,6 +11,7 @@
   backdrop-filter: blur(5px);
   background-color: rgba($color: #0b0d17, $alpha: 0.15);
   font-size: 1rem;
+  z-index: 1;
 }
 
 .close_btn {

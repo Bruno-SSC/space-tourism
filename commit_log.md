@@ -35,4 +35,6 @@ com9
 com10 
     - added tablet and desktop styling for tech-content
     - some minor adjusts and set up to deploy.
+com11
+    - overal improvements in styles and templates over many components.
     

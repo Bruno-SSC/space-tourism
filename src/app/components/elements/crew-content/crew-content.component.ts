@@ -9,10 +9,10 @@ import { crew_member, device_types } from 'src/app/utils/interfaces';
   styleUrls: ['./crew-content.component.scss'],
 })
 export class CrewContentComponent {
+  curr_device: device_types = 'mobile';
   crew: crew_member[] = crew_data;
   active_member: crew_member = this.crew[0];
   member_pic: string = this.active_member.images.png;
-  curr_device: device_types = 'mobile';
 
   constructor(private device_detect: DeviceDetectService) {
     this.device_detect.$current_device_observable.subscribe((value) => {

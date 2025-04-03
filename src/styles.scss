@@ -6,6 +6,24 @@
 
 @import "variables.scss";
 
+@media screen and (max-width: $mobile_max) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: $mobile_max) {
+  html {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: $tablet_max) {
+  html {
+    font-size: 1vw;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,10 +31,6 @@
   box-sizing: border-box;
   text-decoration: none;
   color: #fff;
-}
-
-html {
-  font-size: 12px;
 }
 
 body {
@@ -28,14 +42,6 @@ body {
   overflow-y: scroll;
 }
 
-@media screen and (min-width: $mobile_max) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media screen and (min-width: $tablet_max) {
-  html {
-    font-size: 18px;
-  }
+::-webkit-scrollbar {
+  display: none;
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { DeviceDetectService } from 'src/app/services/device-detect.service';
 import { stars_data } from 'src/app/utils/data';
 import { device_types, star_data } from 'src/app/utils/interfaces';
@@ -9,15 +10,25 @@ import { device_types, star_data } from 'src/app/utils/interfaces';
   styleUrls: ['./destination-content.component.scss'],
 })
 export class DestinationContentComponent {
+  curr_device: device_types = 'mobile';
   stars: star_data[] = stars_data;
   active_star: star_data = stars_data[0];
-  curr_device: device_types = 'mobile';
-  picture_path: string = 'png';
+  picture_path: string = this.active_star.images.png;
 
-  constructor(private device_detect: DeviceDetectService) {
+  constructor(
+    private device_detect: DeviceDetectService,
+    private active_route: ActivatedRoute,
+    private router: Router
+  ) {
     this.device_detect.$current_device_observable.subscribe((value) => {
       this.curr_device = value;
       this.update_img_path();
+    });
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.change_star(this.active_route.snapshot.params['star_name']);
+      }
     });
   }
 
