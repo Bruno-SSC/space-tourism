@@ -37,4 +37,7 @@ com10
     - some minor adjusts and set up to deploy.
 com11
     - overal improvements in styles and templates over many components.
+com12
+    - more style fixes in crew and tech content components
+    - added basic fade_in animations to pages.
     

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { DeviceDetectService } from 'src/app/services/device-detect.service';
+import { content_fade_in } from 'src/app/utils/animations';
 import { stars_data } from 'src/app/utils/data';
 import { device_types, star_data } from 'src/app/utils/interfaces';
 
@@ -8,6 +9,7 @@ import { device_types, star_data } from 'src/app/utils/interfaces';
   selector: 'app-destination-content',
   templateUrl: './destination-content.component.html',
   styleUrls: ['./destination-content.component.scss'],
+  animations: [content_fade_in],
 })
 export class DestinationContentComponent {
   curr_device: device_types = 'mobile';

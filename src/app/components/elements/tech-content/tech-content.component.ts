@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DeviceDetectService } from 'src/app/services/device-detect.service';
+import { content_fade_in } from 'src/app/utils/animations';
 import { technology } from 'src/app/utils/data';
 import { device_types, tech_devices } from 'src/app/utils/interfaces';
 
@@ -7,6 +8,7 @@ import { device_types, tech_devices } from 'src/app/utils/interfaces';
   selector: 'app-tech-content',
   templateUrl: './tech-content.component.html',
   styleUrls: ['./tech-content.component.scss'],
+  animations: [content_fade_in],
 })
 export class TechContentComponent {
   curr_device: device_types = 'mobile';

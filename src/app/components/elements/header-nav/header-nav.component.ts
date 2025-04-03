@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { DeviceDetectService } from 'src/app/services/device-detect.service';
 import { SharedStatesService } from 'src/app/services/shared-states.service';
+import { header_slide_in } from 'src/app/utils/animations';
 import { website_pages } from 'src/app/utils/interfaces';
 
 @Component({
   selector: 'app-header-nav',
   templateUrl: './header-nav.component.html',
   styleUrls: ['./header-nav.component.scss'],
+  animations: [header_slide_in],
 })
 export class HeaderNavComponent {
   device: string = 'mobile';
