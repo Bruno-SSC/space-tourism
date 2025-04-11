@@ -40,4 +40,5 @@ com11
 com12
     - more style fixes in crew and tech content components
     - added basic fade_in animations to pages.
-    
+com13
+    - just adding the _redirects file to the build.
